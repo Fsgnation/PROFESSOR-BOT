@@ -17,26 +17,26 @@ BOT_TOKEN = environ['BOT_TOKEN']
 
 # Bot settings
 WEB_SUPPORT = bool(environ.get("WEBHOOK", 'False')) # for web support on/off
-PICS = (environ.get('PICS' ,'')).split()
+PICS = (environ.get('PICS' ,'https://ibb.co/4WPhtXM https://ibb.co/rcBbWfr https://ibb.co/X7KtY1R https://ibb.co/Ht0DHhj')).split()
 UPTIME = time.time()
 
 # Admins, Channels & Users
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5070075289').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6289965347').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
+auth_channel = environ.get('-1002092755695')
+auth_grp = environ.get('-1002377286734')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://workfsgnation:fkN3IXY1wFyxnOGF@cluster0.5v3eg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URL)
-FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+FILE_DB_URL = environ.get("-1002314587861", DATABASE_URL)
+FILE_DB_NAME = environ.get("SPIDYFiles", DATABASE_NAME)
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Yesfiles')
 
 # Filters Configuration 
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
@@ -44,7 +44,7 @@ START_MESSAGE = environ.get('START_MESSAGE', script.START_TXT)
 BUTTON_LOCK_TEXT = environ.get("BUTTON_LOCK_TEXT", script.BUTTON_LOCK_TEXT)
 FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', script.FORCE_SUB_TEXT)
 
-WELCOM_PIC = environ.get("WELCOM_PIC", "")
+WELCOM_PIC = environ.get("WELCOM_PIC", "https://ibb.co/X7KtY1R")
 WELCOM_TEXT = environ.get("WELCOM_TEXT", script.WELCOM_TEXT)
 PMFILTER = is_enabled(environ.get('PMFILTER', "True"), True)
 G_FILTER = is_enabled(environ.get("G_FILTER", "True"), True)
@@ -52,7 +52,7 @@ BUTTON_LOCK = is_enabled(environ.get("BUTTON_LOCK", "True"), True)
 RemoveBG_API = environ.get("RemoveBG_API", "")
 
 # url shortner
-SHORT_URL = environ.get("SHORT_URL")
+SHORT_URL = 
 SHORT_API = environ.get("SHORT_API")
 
 # Others
